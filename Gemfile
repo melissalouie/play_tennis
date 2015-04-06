@@ -29,6 +29,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~>3.3.1'
 #image upload
 gem 'carrierwave'
+#maps
+gem 'gmaps4rails'
+gem 'geocoder'
+
+gem 'protected_attributes'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
