@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<%= form_for @user do |f| %>
-  <div class="form-group row">
-=======
-<%= form_for(@user, html: {:class => "form-horizontal"}) do |f| %>
 
+<%= form_for @user do |f| %>
   <% if @user.errors.any? %>
   <div id="error_explanation" class="alert alert-danger">
     <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -14,7 +10,7 @@
     </ul>
   </div>
   <% end %>
-  <div class="form-group">
+  <div class="form-group row">
     <div class="field">
       <%= f.label :first_name, :class => 'control-label col-md-2' %>
       <div class='form-controls col-md-4'>
@@ -23,7 +19,6 @@
     </div>
   </div>
   <div class="form-group row">
-  <div class="form-group">
     <div class="field">
       <%= f.label :last_name, :class => 'control-label col-md-2' %>
       <div class='form-controls col-md-4'>
@@ -39,13 +34,14 @@
       </div>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group row">
     <div class="field">
       <%= f.label :email, :class => 'control-label col-md-2' %>
       <div class='form-controls col-md-4'>
         <%= f.email_field :email, :class => 'form-control' %>
       </div>
     </div>
+  </div>
   <div class="form-group row">
     <div class="field">
       <%= f.label :address, :class => 'control-label col-md-2' %>
@@ -65,13 +61,11 @@
   <div class="form-group row">
     <div class="field">
       <%= f.label 'Image', :class => 'control-label col-md-2' %>
-
       <div class='form-controls col-md-4'>
         <%= f.file_field :avatar %>
       </div>
     </div>
   </div>
-
   <div class="form-group row">
     <div class="field">
       <%= f.label :ability_id, :class=> 'control-label col-md-2' %>
@@ -80,17 +74,15 @@
       </div>
     </div>
   </div>
-  <div class="form-group">
-
-     <div class="field">
+  <div class="form-group row">
+    <div class="field">
        <%= f.label :password, :class => 'control-label col-md-2' %>
        <div class='form-controls col-md-4'>
          <%= f.password_field :password, :class => 'form-control' %>
        </div>
      </div>
    </div>
-   <div class="form-group">
-
+   <div class="form-group row">
      <div class="field">
        <%= f.label :password_confirmation, :class => 'control-label col-md-2' %>
        <div class='form-controls col-md-4'>
@@ -98,16 +90,15 @@
        </div>
      </div>
    </div>
-   <div class="form-group">
+   <div class="form-group row">
     <div class="field">
       <%= f.label 'About Me', :class => 'control-label col-md-2' %>
-
       <div class='form-controls col-md-4'>
         <%= f.text_field :bio, :class => 'form-control' %>
       </div>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group row">
     <div class="field">
       <%= f.label 'Image', :class => 'control-label col-md-2' %>
       <div class='form-controls col-md-4'>
@@ -115,7 +106,7 @@
       </div>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group row">
     <div class="col-md-offset-2 col-md-4">
       <%= f.submit :class => 'btn btn-primary'%>
       <%= link_to 'cancel', root_path, class: 'btn btn-default'%>

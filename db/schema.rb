@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150406175119) do
-=======
-ActiveRecord::Schema.define(version: 20150403194810) do
->>>>>>> b796efd296ff02927f2e53f0adaa8e56f3e4dce7
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,17 +27,11 @@ ActiveRecord::Schema.define(version: 20150403194810) do
     t.string  "email"
     t.string  "password_digest"
     t.integer "ability_id"
-<<<<<<< HEAD
-    t.string  "bio"
     t.string  "avatar"
-    t.integer "zip_code"
+    t.string  "bio"
     t.float   "latitude"
     t.float   "longitude"
     t.string  "address"
-=======
-    t.string  "avatar"
-    t.string  "bio"
->>>>>>> b796efd296ff02927f2e53f0adaa8e56f3e4dce7
   end
 
   add_index "users", ["ability_id"], name: "index_users_on_ability_id", using: :btree
