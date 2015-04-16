@@ -33,7 +33,7 @@ gem 'carrierwave'
 gem 'gmaps4rails'
 gem 'geocoder'
 
-gem 'protected_attributes'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

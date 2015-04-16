@@ -1,1 +1,31 @@
-HOME
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+     <div class="item active">
+      <%= image_tag("ball.jpg", class: 'layer') %>
+       <div class="carousel-caption">
+           <h3>Let us find you tennis partners in your area.</h3>
+       </div>
+     </div>
+     <div class="item">
+       <%= image_tag("rackets.jpg", class: 'layer') %>
+       <div class="carousel-caption">
+           <h3>Get outside, play tennis, and have fun!</h3>
+       </div>
+     </div>
+
+   </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <i class="fa fa-angle-left"></i>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <i class="fa fa-angle-right"></i>
+  </a>
+</div> <!-- Carousel -->
