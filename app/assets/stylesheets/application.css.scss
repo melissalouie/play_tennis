@@ -26,7 +26,7 @@ body {
   filter: alpha(opacity=40);
 }
 
-.fa {
+#arrow {
   margin-top: 220px;
   font-size: 50px;
 }
@@ -104,3 +104,26 @@ a:hover {
    font-size: 13px;
    font-weight: 300;
  }
+
+#header {
+  margin-left: 80px;
+}
+
+#user {
+  font-size: 100px;
+  margin-top: 40px;
+}
+
+#connect {
+  font-size: 100px;
+  margin-top: 10px;
+}
+
+.get-started {
+  margin-top: -40px;
+}
+
+.ball-icon {
+  height: 90px;
+  margin-top: 35px;
+}
