@@ -23,13 +23,13 @@
    </div>
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <i class="fa fa-angle-left"></i>
+    <i class="fa fa-angle-left" id="arrow"></i>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <i class="fa fa-angle-right"></i>
+    <i class="fa fa-angle-right" id="arrow"></i>
   </a>
 </div> <!-- Carousel -->
-  <div class="row">
+  <div class="row" id="map-section" >
     <div class="col-md-4">
       <hr class="section-heading-spacer">
       <h2 class="section-title">Find players close to you.</h2>
@@ -39,8 +39,6 @@
     <head>
       <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
       <meta charset="utf-8">
-
-      <title>Places search box</title>
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
       <script>
   // This example adds a search box to a map, using the Google Place Autocomplete
@@ -48,6 +46,7 @@
   // pick list containing a mix of places and predicted search terms.
 
   function initialize() {
+<<<<<<< HEAD
     var mapOptions = {
       zoom: 10,
       center: new google.maps.LatLng(39.72, -104.99),
@@ -55,6 +54,17 @@
     }
     var map = new google.maps.Map(document.getElementById("map-canvas"),
          mapOptions);
+=======
+
+    var mapOptions = {
+       center: { lat: 39.744, lng:-105.010},
+       zoom: 12,
+     };
+     var map = new google.maps.Map(document.getElementById('map-canvas'),
+         mapOptions);
+
+
+>>>>>>> 83074a6af90fe36a21aabd6e23a12de1418baae8
   }
   google.maps.event.addDomListener(window, 'load', initialize);
     </script>
@@ -68,6 +78,7 @@
     </div>
   </div>
   <div class="row">
+<<<<<<< HEAD
     <div class="col-md-6 col-md-offset-3">
       <div class="header">
         <center><hr class="section-heading-spacer"></center>
@@ -87,5 +98,24 @@
     <div class="col-md-4">
       <center><h3>Play Tennis!</h3></center>
       <center><%= image_tag("tennis-ball.png", id: "ball-icon") %></center>
+=======
+    <div class="col-md-4 col-md-offset-4">
+      <hr class="section-heading-spacer" id="header">
+      <h2 class="section-title"><center>Get Started</center></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 get-started">
+      <h3><center>Create your profile</h3></center>
+      <center><i class="fa fa-user" id="user"></i></center>
+    </div>
+    <div class="col-md-4 get-started">
+      <h3><center>Connect with other players your level in your area</center></h3>
+      <center><i class="fa fa-arrows-h" id="connect"></i></center>
+    </div>
+    <div class="col-md-4 get-started">
+      <h3><center>Play Tennis!</center></h3>
+      <center><%= image_tag("tennis-icon.png", class: "ball-icon") %></center>
+>>>>>>> 83074a6af90fe36a21aabd6e23a12de1418baae8
     </div>
   </div>
