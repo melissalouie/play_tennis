@@ -7,6 +7,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.container {
+  margin-left: 160px;
+}
+
 #avatar {
   height: 300px;
 }
@@ -39,7 +43,8 @@ a:hover {
   float: left;
   width: 200px;
   border-top: 3px solid #e7e7e7;
-  margin-top: 0;
+  margin-top: -30px;
+  margin-left: 170px;
 }
 
 .section-title {
@@ -104,3 +109,22 @@ a:hover {
    font-size: 13px;
    font-weight: 300;
  }
+
+#get-started {
+  margin-right: 15px;
+}
+
+#user-icon {
+  margin-top: 10px;
+  font-size: 100px;
+}
+
+#connect-icon {
+  margin-top: 10px;
+  font-size: 100px;
+}
+
+#ball-icon {
+  height: 100px;
+  margin-top: 30px;
+}
