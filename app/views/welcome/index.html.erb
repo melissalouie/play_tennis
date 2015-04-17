@@ -29,7 +29,7 @@
     <i class="fa fa-angle-right" id="arrow"></i>
   </a>
 </div> <!-- Carousel -->
-  <div class="row" id="map-section" >
+  <div class="row homepage" id="map-section" >
     <div class="col-md-4">
       <hr class="section-heading-spacer">
       <h2 class="section-title">Find players close to you.</h2>
@@ -53,7 +53,20 @@
     }
     var map = new google.maps.Map(document.getElementById("map-canvas"),
          mapOptions);
-    }
+         <% @users.each do |user| %>
+         var image = 'user.jpeg';
+
+
+              var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(<%= user.latitude %>, <%= user.longitude %>),
+              map: map,
+              icon: image
+
+         });
+    marker.setMap(map);
+         <% end %>
+
+      }
   google.maps.event.addDomListener(window, 'load', initialize);
     </script>
       <style>
@@ -65,8 +78,7 @@
       <div id="map-canvas"></div>
     </div>
   </div>
-  <div class="row">
-
+  <div class="row homepage">
     <div class="col-md-6 col-md-offset-3">
       <div class="header">
         <center><hr class="section-heading-spacer"></center>
@@ -74,7 +86,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="get-started">
     <div class="col-md-4">
       <center><h3>Create your profile</h3></center>
       <center><i class="fa fa-user" id="user-icon"></i></center>
@@ -87,4 +99,3 @@
       <center><h3>Play Tennis!</h3></center>
       <center><%= image_tag("tennis-ball.png", id: "ball-icon") %></center>
     </div>
-  </div>

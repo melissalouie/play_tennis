@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 body {
-
+  padding-top: 30px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -66,6 +66,10 @@ a:hover {
 }
 
 .row {
+  margin-top: 20px;
+}
+
+.homepage {
   margin-top: 50px;
 }
 
@@ -130,22 +134,22 @@ a:hover {
  }
 
 #get-started {
-  margin-right: 15px;
+  margin-top: 15px;
 }
 
 #user-icon {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 100px;
 }
 
 #connect-icon {
-  margin-top: 10px;
+  margin-top: -10px;
   font-size: 100px;
 }
 
 #ball-icon {
   height: 100px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 #header {
