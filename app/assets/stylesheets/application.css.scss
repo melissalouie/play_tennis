@@ -8,7 +8,21 @@ body {
 }
 
 .container {
-  margin-left: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links a {
+  color: inherit;
+}
+
+
+footer .row{
+  padding: 1em 0;
+  margin-top: 1em;
+  border-top: 1px solid #ccc;
+  border-top-color: rgb(204, 204, 204);
+
 }
 
 #avatar {
@@ -110,6 +124,11 @@ a:hover {
    font-weight: 300;
  }
 
+ #map-section hr {
+   margin-top: 0;
+   margin-left: 0;
+ }
+
 #get-started {
   margin-right: 15px;
 }
@@ -127,6 +146,7 @@ a:hover {
 #ball-icon {
   height: 100px;
   margin-top: 30px;
+}
 
 #header {
   margin-left: 80px;
@@ -149,5 +169,4 @@ a:hover {
 .ball-icon {
   height: 90px;
   margin-top: 35px;
->>>>>>> 83074a6af90fe36a21aabd6e23a12de1418baae8
-}
+  }
