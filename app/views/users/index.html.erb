@@ -1,0 +1,10 @@
+<% @users.each do |user| %>
+  <div class="col-md-4">
+    <%= image_tag(user.avatar_url, class: 'img-responsive', id: 'avatar') %>
+    <center><hr class="section-heading-spacer"></center>
+    
+    <center><%= user.email %></center>
+    <center><%= user.bio %></center>
+    <center><%= user.ability %></center>
+  </div>
+<% end %>
