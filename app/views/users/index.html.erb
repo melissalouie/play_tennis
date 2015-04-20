@@ -1,10 +1,12 @@
 <% @users.each do |user| %>
   <div class="col-md-4">
-    <%= image_tag(user.avatar_url, class: 'img-responsive', id: 'avatar') %>
-    <center><hr class="section-heading-spacer"></center>
-    
-    <center><%= user.email %></center>
-    <center><%= user.bio %></center>
-    <center><%= user.ability %></center>
+    <center><%= image_tag(user.avatar_url, class: 'img-responsive', id: 'avatar') %></center>
+    <div class="user-info">
+      <center><hr class="section-heading-spacer" id="user-heading"></center>
+      <center><%= user.full_name %></center>
+      <center><%= user.email %></center>
+      <center><%= user.bio %></center>
+      <center><%= user.ability %></center>
+    </div>
   </div>
 <% end %>
