@@ -33,6 +33,7 @@ gem 'carrierwave'
 gem 'gmaps4rails'
 gem 'geocoder'
 
+gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
 
 
 # Use Unicorn as the app server
