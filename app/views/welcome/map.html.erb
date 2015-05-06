@@ -1,0 +1,32 @@
+<script>
+function initialize() {
+  var mapOptions = {
+    zoom: 10,
+    center: new google.maps.LatLng(39.72, -104.99),
+    disableDefaultUI: true
+  }
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
+
+      <% @users.each do |user| %>
+
+        var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(<%= user.latitude %>, <%= user.longitude %>),
+        map: map
+
+  });
+  marker.setMap(map);
+      <% end %>
+  }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  </head>
+  <div class="row">
+  <div class="col-md-4">
+    Search
+  </div>
+  <div class="col-md-8">
+    <div id="map-canvas-page"></div>
+  </div>
+</div>

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', as: 'signout'
   get '/about' => 'welcome#about'
   get '/contact' => 'contact#about'
-
+  get '/map' => 'welcome#map', as: 'map'
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
