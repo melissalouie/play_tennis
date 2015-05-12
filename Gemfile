@@ -32,6 +32,8 @@ gem 'carrierwave'
 #maps
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'geokit'
+
 
 gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
 

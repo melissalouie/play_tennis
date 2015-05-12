@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420174922) do
+ActiveRecord::Schema.define(version: 20150508171411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "abilities", force: :cascade do |t|
     t.string "level"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "address"
   end
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
