@@ -5,4 +5,8 @@ class WelcomeController < ApplicationController
 
   def about
   end
+
+  def map
+    @users = User.all
+  end
 end

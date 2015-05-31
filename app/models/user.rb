@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
     '6.0 - Very Advanced, has Division I collegiate experience, semi-pro, etc.'
     ]
 
+  def full_name
+    "#{self.first_name} #{self.last_name}"
+  end
+
 end
