@@ -12,7 +12,7 @@ body {
   margin-right: auto;
 }
 
-.links a {
+a {
   color: inherit;
 }
 
@@ -135,6 +135,7 @@ a:hover {
 
 #get-started {
   margin-top: 15px;
+  margin-left: -15px;
 }
 
 #user-icon {
