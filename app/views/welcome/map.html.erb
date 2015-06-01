@@ -15,6 +15,7 @@ function initialize() {
         var marker = new google.maps.Marker({
         position: new google.maps.LatLng(<%= user.latitude %>, <%= user.longitude %>),
         map: map
+        id: user.id 
 
   });
   marker.setMap(map);
