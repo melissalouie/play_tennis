@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     '4.0 - Intermediate, has match experience and consistency and accuracy with shots',
     '4.5 - Intermediate to Advanced, has competitive experience in the past',
     '5.0 - Advanced, has collegiate competitive experience',
-    '6.0 - Very Advanced, has Division I collegiate experience, semi-pro, etc.'
+    '6.0 - Very Advanced, has Division I collegiate experience'
     ]
 
   def full_name
