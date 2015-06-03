@@ -5,6 +5,7 @@
 body {
   padding-top: 30px;
   font-family: 'Open Sans', sans-serif;
+  color: #9d9d9d;
 }
 
 .container {
@@ -202,4 +203,8 @@ a:hover {
   padding: 10px;
   margin-left: 0;
   width: 350px;
+}
+
+#get-started {
+  margin-left: 0 !important;
 }
