@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/about' => 'welcome#about'
   get '/contact' => 'contact#about'
   get '/map' => 'welcome#map', as: 'map'
+  get '/messageboard' => 'welcome#messages', as: 'messages'
   resources :users
   resources :locations
   # The priority is based upon order of creation: first created -> highest priority.

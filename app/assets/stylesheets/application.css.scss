@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 body {
-  padding-top: 30px;
+  padding-top: 50px;
   font-family: 'Open Sans', sans-serif;
   color: #9d9d9d;
 }
@@ -207,4 +207,8 @@ a:hover {
 
 #get-started {
   margin-left: 0 !important;
+}
+
+.message-form {
+  border-right: solid 1px;
 }
