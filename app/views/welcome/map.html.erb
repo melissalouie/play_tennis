@@ -1,22 +1,6 @@
 <html>
 <head>
 </head>
-<body>
-  <div class="col-md-4">
-    <input id="pac-input" class="controls" type="text" placeholder="Find players in your area...">
-    <br><br>
-    <% @users.each do |user| %>
-    <div class="user">
-      <%= user.full_name %><br>
-      <%= user.address %>
-      Send Message: <%= mail_to "#{user.email}" %>
-      <br><br>
-    </div>
-    <% end %>
-  </div>
-  <div class="col-md-8">
-    <div id="map-canvas-page"></div>
-  </div>
 <script>
 
 var markers = [];
