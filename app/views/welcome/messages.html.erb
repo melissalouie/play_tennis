@@ -1,5 +1,5 @@
 <div class="col-md-3 message-form">
-  <%= form_for(@message) do |f| %>
+  <%= form_for(@message, remote: true) do |f| %>
     <div class="form-group">
       <%= f.label :email %>
       <%= f.text_field :email, class: 'form-control'%>
@@ -8,7 +8,7 @@
       <%= f.label :text, 'Message' %>
       <%= f.text_area :text, class: 'form-control'%>
     </div>
-    <%= f.submit 'Post Message' %>
+    <%= f.submit 'Post Message', id: 'post-message' %>
   <% end %>
 </div>
 <div class="col-md-3">

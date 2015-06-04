@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(function() {
+  $('#post-message').on('click', function() {
+    $.ajax({
+      url: "/messages",
+      method: 'POST',
+      data: {message: {'email': $("#message_email").val() , 'text': $("#message_text").val() }},
+      success: function() {
+        console.log("test")
+      }
+    });
+  });
+});
