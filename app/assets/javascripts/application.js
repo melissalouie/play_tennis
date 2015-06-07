@@ -16,13 +16,16 @@
 //= require_tree .
 
 $(function() {
-  $('#post-message').on('click', function() {
+  $('#post-message').on('click', function(event) {
+    event.preventDefault();
+
     $.ajax({
       url: "/messages",
+      dataType: 'json',
       method: 'POST',
-      data: {message: {'email': $("#message_email").val() , 'text': $("#message_text").val() }},
+      data: {message:{email: $("#message_email").val() , text: $("#message_text").val() }},
       success: function() {
-        console.log("test")
+        console.log("test");
       }
     });
   });
