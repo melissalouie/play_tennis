@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :sayings
+
   root 'welcome#index'
   get '/signin' => 'sessions#new', as: 'signin'
   post '/signin' => 'sessions#create'

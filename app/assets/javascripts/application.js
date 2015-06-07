@@ -18,26 +18,39 @@
 $(function() {
   // $('#post-message').on('click', function(event) {
   //   event.preventDefault();
-  //
+  //   var email: $("#message_email").val();
+  //   var text: $("#message_text").val();
   //   $.ajax({
   //     url: "/messages",
   //     dataType: 'json',
   //     method: 'POST',
-  //     data: {message:{email: $("#message_email").val() , text: $("#message_text").val() }},
+  //     data: {message:{email: email, text: text }},
   //     success: function() {
   //       console.log("test");
   //     }
   //   });
   // });
-
   $('#new_message').submit(function(event) {
     event.preventDefault();
     $.ajax({
       url: '/messages',
       method: 'POST',
+      dataType: 'json',
       data: { message: { email: $('#message_email').val(), text: $('#message_text').val() } },
       success: function() {
         console.log('hello');
+      }
+    });
+  });
+  $('#new_saying').submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: '/sayings',
+      method: 'POST',
+      dataType: 'json',
+      data: { saying: { text: $('#saying_text').val() }},
+      success: function(data) {
+        console.log(data);
       }
     });
   });

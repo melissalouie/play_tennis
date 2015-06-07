@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sayings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sayings.each do |saying| %>
+      <tr>
+        <td><%= saying.text %></td>
+        <td><%= link_to 'Show', saying %></td>
+        <td><%= link_to 'Edit', edit_saying_path(saying) %></td>
+        <td><%= link_to 'Destroy', saying, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saying', new_saying_path %>
