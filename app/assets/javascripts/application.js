@@ -16,16 +16,28 @@
 //= require_tree .
 
 $(function() {
-  $('#post-message').on('click', function(event) {
-    event.preventDefault();
+  // $('#post-message').on('click', function(event) {
+  //   event.preventDefault();
+  //
+  //   $.ajax({
+  //     url: "/messages",
+  //     dataType: 'json',
+  //     method: 'POST',
+  //     data: {message:{email: $("#message_email").val() , text: $("#message_text").val() }},
+  //     success: function() {
+  //       console.log("test");
+  //     }
+  //   });
+  // });
 
+  $('#new_message').submit(function(event) {
+    event.preventDefault();
     $.ajax({
-      url: "/messages",
-      dataType: 'json',
+      url: '/messages',
       method: 'POST',
-      data: {message:{email: $("#message_email").val() , text: $("#message_text").val() }},
+      data: { message: { email: $('#message_email').val(), text: $('#message_text').val() } },
       success: function() {
-        console.log("test");
+        console.log('hello');
       }
     });
   });
