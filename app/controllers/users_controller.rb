@@ -21,6 +21,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def match
+    @user = User.find()
+  end
+
   private
 
   def user_params

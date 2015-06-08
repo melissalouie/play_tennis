@@ -16,20 +16,6 @@
 //= require_tree .
 
 $(function() {
-  // $('#post-message').on('click', function(event) {
-  //   event.preventDefault();
-  //   var email: $("#message_email").val();
-  //   var text: $("#message_text").val();
-  //   $.ajax({
-  //     url: "/messages",
-  //     dataType: 'json',
-  //     method: 'POST',
-  //     data: {message:{email: email, text: text }},
-  //     success: function() {
-  //       console.log("test");
-  //     }
-  //   });
-  // });
   $('#new_message').submit(function(event) {
     event.preventDefault();
     $.ajax({
@@ -37,8 +23,8 @@ $(function() {
       method: 'POST',
       dataType: 'json',
       data: { message: { email: $('#message_email').val(), text: $('#message_text').val() } },
-      success: function() {
-        console.log('hello');
+      success: function(data) {
+        $(".messages").append("<div class='col-md-3 message'><p>" + data.text + '</p><p>' + data.email + '</p></div>');
       }
     });
   });
