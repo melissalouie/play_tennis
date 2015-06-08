@@ -24,7 +24,10 @@ $(function() {
       dataType: 'json',
       data: { message: { email: $('#message_email').val(), text: $('#message_text').val() } },
       success: function(data) {
-        $(".messages").append("<div class='col-md-3 message'><p>" + data.text + '</p><p>' + data.email + '</p></div>');
+        if(data.id % 4 === 0) {
+          $(".messages").append("<div class='col-md-3 blank_message'></div><div class='col-md-3 message'><p>" + data.text + '</p><p>' + data.email + '</p></div>');
+        }
+        else { $(".messages").append("<div class='col-md-3 message'><p>" + data.text + '</p><p>' + data.email + '</p></div>'); }
       }
     });
   });
