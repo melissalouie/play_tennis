@@ -42,16 +42,5 @@ $(function() {
       }
     });
   });
-  $('#new_saying').submit(function(event) {
-    event.preventDefault();
-    $.ajax({
-      url: '/sayings',
-      method: 'POST',
-      dataType: 'json',
-      data: { saying: { text: $('#saying_text').val() }},
-      success: function(data) {
-        console.log(data);
-      }
-    });
-  });
+
 });
