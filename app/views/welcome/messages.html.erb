@@ -12,5 +12,14 @@
   <% end %>
 </div>
 <div class="messages">
-
+  <% @messages.each do |message| %>
+    <% if message.id % 4 == 0 %>
+      <div class="col-md-3 blank_message"></div>
+    <% else %>
+      <div class="col-md-3 message">
+        <p><%= message.text %></p>
+        <p>Send Message: <%= mail_to message.email %></p>
+      </div>
+    <% end %>
+  <% end %>
 </div>
