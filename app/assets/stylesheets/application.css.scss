@@ -249,7 +249,7 @@ a:hover {
 }
 
 .about {
-  height: 300px;
+  height: 250px;
 }
 
 // Homepage Styles
@@ -260,4 +260,18 @@ a:hover {
 .about h2 {
   border-top: solid 1px;
   padding: 20px;
+}
+
+.feature {
+  height: 250px;
+  width: 23%;
+  margin: 10px
+}
+
+.feature p {
+  text-align: center;
+}
+
+#keyboard {
+  display:none;
 }

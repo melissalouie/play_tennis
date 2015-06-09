@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/about' => 'welcome#about'
   get '/contact' => 'contact#about'
   get '/map' => 'welcome#map', as: 'map'
-  get '/messageboard' => 'welcome#messages', as: 'messages'
+  get '/message_board' => 'welcome#messages', as: 'messages'
   get '/match' => 'users#match', as: 'match'
   resources :users
   resources :locations

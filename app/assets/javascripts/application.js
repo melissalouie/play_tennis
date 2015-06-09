@@ -16,6 +16,8 @@
 //= require_tree .
 
 $(function() {
+
+  // Message Board Animations
   $('#new_message').submit(function(event) {
     event.preventDefault();
     $.ajax({
@@ -31,4 +33,19 @@ $(function() {
       }
     });
   });
+
+  // Homepage Animations
+  $('#sign_up').hover(
+    function() {
+      $(this).fadeOut(500);
+    }, function() {
+      $('#keyboard').show();
+    }
+  );
+
+
 });
+
+// $('img').animate({
+//   left: "+=50"
+// },1000);
