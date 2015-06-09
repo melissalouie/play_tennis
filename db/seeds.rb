@@ -1,10 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-User.create(first_name: 'Melissa', last_name: 'Louie', email: 'melissa@mail.com', password: 'password', address: '1560 Boulder Street, Denver, CO 80211')
-User.create(first_name: 'Buddy', last_name: 'Louie', email: 'buddy@mail.com', password: 'password', address: '7066 South Niagara Court, Centennial, CO, 80112')
+User.create(first_name: 'Melissa', last_name: 'Louie', email: 'melissa@mail.com', password: 'password', bio: 'I created this app!', address: '1560 Boulder Street, Denver, CO 80211', avatar: File.open(File.join(Rails.root, '/app/assets/images/users/melissa.jpeg')), ability: '4.0 - Intermediate, has match experience and consistency and accuracy with shots' )
+User.create(first_name: 'Buddy', last_name: 'Louie', email: 'buddy@mail.com', password: 'password', address: '7066 South Niagara Court, Centennial, CO, 80112', avatar: File.open(File.join(Rails.root, '/app/assets/images/users/buddy.jpg')), ability: '2.0 - New to tennis')
+User.create(first_name: 'Roger', last_name: 'Federer', email: 'roger@mail.com', password: 'password', address: '1555 Blake Street #101, Denver, CO 80202', avatar: File.open(File.join(Rails.root, '/app/assets/images/users/roger.jpg')), ability: '6.0 - Very Advanced, has Division I collegiate experience')
+User.create(first_name: 'Rafael', last_name: 'Nadal', email: 'rafa@mail.com', password: 'password', address: "1101 13th St, Denver, CO 80204", avatar: File.open(File.join(Rails.root, '/app/assets/images/users/rafa.jpg')), ability: '6.0 - Very Advanced, has Division I collegiate experience')
+User.create(first_name: 'Novak', last_name: 'Djokovic', email: 'novak@mail.com', password: 'password', address: "654 Navajo St, Denver, CO 80211", avatar: File.open(File.join(Rails.root, '/app/assets/images/users/novak.jpg')), ability: '6.0 - Very Advanced, has Division I collegiate experience')
+User.create(first_name: 'Serena', last_name: 'Williams', email: 'serena@mail.com', password: 'password', address: "2000 Elitch Cir, Denver, CO 80204", avatar: File.open(File.join(Rails.root, '/app/assets/images/users/serena.jpg')), ability: '6.0 - Very Advanced, has Division I collegiate experience')
+User.create(first_name: 'Andre', last_name: "Agassi", email: 'andre@mail.com', password: 'password', address: '1000 Chopper Cir, Denver, CO 80204', avatar: File.open(File.join(Rails.root, '/app/assets/images/users/andre.jpg')), ability: '6.0 - Very Advanced, has Division I collegiate experience')
+User.create(first_name: 'Monica', last_name: 'Seles', email: 'monica@mail.com', password: 'password', address: '1672 Lawrence St, Denver, CO 80202', avatar: File.open(File.join(Rails.root, '/app/assets/images/users/monica.jpg')), ability: '6.0 - Very Advanced, has Division I collegiate experience')
