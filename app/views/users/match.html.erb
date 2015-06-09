@@ -1,37 +1,100 @@
 <div class="page-header">
   <h1>Players in Your Area</h1>
 </div>
-<center><h2>Within Ten Miles</h2></center>
-<% @matches_10miles.each do |match| %>
-  <div class="col-md-3 match">
-    <div class="thumbnail">
-      <%= image_tag(match.avatar_url, class: 'thumbnail') %>
-      <div class="caption">
-        <h4><%=link_to match.full_name, user_path(match) %></h4>
-        <% if match.ability == '2.0 - New to tennis' %>
-          <p>Level: 2.0</p>
-        <% elsif match.ability == '2.5 - Very Beginner' %>
-          <p>Level: 2.5</p>
-        <% elsif match.ability == '3.0 - Beginner, has had court experience' %>
-          <p>Level: 3.0</p>
-        <% elsif match.ability == '3.5 - Beginner to Intermediate, has some consistency with shots' %>
-          <p>Level: 3.5</p>
-        <% elsif match.ability == '4.0 - Intermediate, has match experience and consistency and accuracy with shots' %>
-          <p>Level: 4.0</p>
-        <% elsif match.ability == '4.5 - Intermediate to Advanced, has competitive experience in the past' %>
-          <p>Level: 4.5</p>
-        <% elsif match.ability == '5.0 - Advanced, has collegiate competitive experience' %>
-          <p>Level: 5.0</p>
-        <% else %>
-          <p>Level: 6.0<p>
-        <% end %>
-        <p><%= mail_to match.email, 'Send Message', class: 'btn btn-default' %></p>
+
+<div class="10mile_matches clearfix">
+  <center><h2>Within Ten Miles</h2></center>
+  <% @matches_10miles.each do |match| %>
+    <div class="col-md-3 match">
+      <div class="thumbnail">
+        <%= image_tag(match.avatar_url, class: 'thumbnail') %>
+        <div class="caption">
+          <h4><%=link_to match.full_name, user_path(match) %></h4>
+          <% if match.ability == '2.0 - New to tennis' %>
+            <p>Level: 2.0</p>
+          <% elsif match.ability == '2.5 - Very Beginner' %>
+            <p>Level: 2.5</p>
+          <% elsif match.ability == '3.0 - Beginner, has had court experience' %>
+            <p>Level: 3.0</p>
+          <% elsif match.ability == '3.5 - Beginner to Intermediate, has some consistency with shots' %>
+            <p>Level: 3.5</p>
+          <% elsif match.ability == '4.0 - Intermediate, has match experience and consistency and accuracy with shots' %>
+            <p>Level: 4.0</p>
+          <% elsif match.ability == '4.5 - Intermediate to Advanced, has competitive experience in the past' %>
+            <p>Level: 4.5</p>
+          <% elsif match.ability == '5.0 - Advanced, has collegiate competitive experience' %>
+            <p>Level: 5.0</p>
+          <% else %>
+            <p>Level: 6.0<p>
+          <% end %>
+          <p><%= mail_to match.email, 'Send Message', class: 'btn btn-default' %></p>
+        </div>
       </div>
     </div>
+  <% end %>
+</div>
+
+
+<div class="20mile_matches clearfix">
+  <center><h2>Within Twenty Miles</h2></center>
+  <% @matches_20miles.each do |match| %>
+    <div class="col-md-3 match">
+      <div class="thumbnail">
+        <%= image_tag(match.avatar_url, class: 'thumbnail') %>
+        <div class="caption">
+          <h4><%=link_to match.full_name, user_path(match) %></h4>
+          <% if match.ability == '2.0 - New to tennis' %>
+            <p>Level: 2.0</p>
+          <% elsif match.ability == '2.5 - Very Beginner' %>
+            <p>Level: 2.5</p>
+          <% elsif match.ability == '3.0 - Beginner, has had court experience' %>
+            <p>Level: 3.0</p>
+          <% elsif match.ability == '3.5 - Beginner to Intermediate, has some consistency with shots' %>
+            <p>Level: 3.5</p>
+          <% elsif match.ability == '4.0 - Intermediate, has match experience and consistency and accuracy with shots' %>
+            <p>Level: 4.0</p>
+          <% elsif match.ability == '4.5 - Intermediate to Advanced, has competitive experience in the past' %>
+            <p>Level: 4.5</p>
+          <% elsif match.ability == '5.0 - Advanced, has collegiate competitive experience' %>
+            <p>Level: 5.0</p>
+          <% else %>
+            <p>Level: 6.0<p>
+          <% end %>
+          <p><%= mail_to match.email, 'Send Message', class: 'btn btn-default' %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
   </div>
-<% end %>
-<center><h2>Within Twenty Miles</h2></center>
-<center><h2>Players at Your Level</h2></center>
-<% @matches_ability.each do |match| %>
-<%= match.full_name %>
-<% end %>
+
+<div class="ability_matches clearfix">
+  <center><h2>Players at Your Level</h2></center>
+  <% @matches_ability.each do |match| %>
+    <div class="col-md-3 match">
+      <div class="thumbnail">
+        <%= image_tag(match.avatar_url, class: 'thumbnail') %>
+        <div class="caption">
+          <h4><%=link_to match.full_name, user_path(match) %></h4>
+          <% if match.ability == '2.0 - New to tennis' %>
+            <p>Level: 2.0</p>
+          <% elsif match.ability == '2.5 - Very Beginner' %>
+            <p>Level: 2.5</p>
+          <% elsif match.ability == '3.0 - Beginner, has had court experience' %>
+            <p>Level: 3.0</p>
+          <% elsif match.ability == '3.5 - Beginner to Intermediate, has some consistency with shots' %>
+            <p>Level: 3.5</p>
+          <% elsif match.ability == '4.0 - Intermediate, has match experience and consistency and accuracy with shots' %>
+            <p>Level: 4.0</p>
+          <% elsif match.ability == '4.5 - Intermediate to Advanced, has competitive experience in the past' %>
+            <p>Level: 4.5</p>
+          <% elsif match.ability == '5.0 - Advanced, has collegiate competitive experience' %>
+            <p>Level: 5.0</p>
+          <% else %>
+            <p>Level: 6.0<p>
+          <% end %>
+          <p><%= mail_to match.email, 'Send Message', class: 'btn btn-default' %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
