@@ -30,3 +30,8 @@
     </div>
   </div>
 <% end %>
+<center><h2>Within Twenty Miles</h2></center>
+<center><h2>Players at Your Level</h2></center>
+<% @matches_ability.each do |match| %>
+<%= match.full_name %>
+<% end %>
