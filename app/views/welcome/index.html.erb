@@ -30,20 +30,20 @@
 </div> <!-- Carousel -->
 <div class="col-md-10 col-md-offset-1 about clearfix">
   <h2>ProMatch is where you can find your tennis community.</h2>
-  <p class="lead">Let us match you with players in your area as well as at your level.</p>
+  <p class="lead">Let us match you with players in your area and at your level.</p>
 </div>
 <div class="row clearfix features">
   <div class="col-md-3 feature" id="sign_up">
-    <p>Sign Up</p>
+    <p class="lead" id="sign_up_text">Sign Up</p>
     <%= image_tag('keyboard.jpg', size: '265x265', id: 'keyboard') %>
   </div>
   <div class="col-md-3 feature">
-    <%= image_tag('keyboard.jpg', size: '265x265') %>
+    <p class="lead"><%= link_to 'See Your Matches', match_path %></p>
   </div>
   <div class="col-md-3 feature">
-    <%= image_tag('keyboard.jpg', size: '265x265') %>
+    <p class="lead"><%= link_to 'Explore Our Map', map_path %></p>
   </div>
   <div class="col-md-3 feature">
-    <%= image_tag('keyboard.jpg', size: '265x265') %>
+    <p class="lead"><%= link_to "Look Who's Talking", messages_path %></p>
   </div>
 </div>

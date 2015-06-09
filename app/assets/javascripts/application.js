@@ -35,17 +35,12 @@ $(function() {
   });
 
   // Homepage Animations
+
   $('#sign_up').hover(
     function() {
-      $(this).fadeOut(500);
+      $('#sign_up_text').fadeOut(500);
     }, function() {
       $('#keyboard').show();
     }
   );
-
-
 });
-
-// $('img').animate({
-//   left: "+=50"
-// },1000);
