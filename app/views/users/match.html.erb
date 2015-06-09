@@ -37,7 +37,7 @@
 
 <div class="20mile_matches clearfix">
   <center><h2>Within Twenty Miles</h2></center>
-  <% @matches_20miles.each do |match| %>
+  <% @matches_20miles_uniq.each do |match| %>
     <div class="col-md-3 match">
       <div class="thumbnail">
         <%= image_tag(match.avatar_url, class: 'thumbnail') %>
