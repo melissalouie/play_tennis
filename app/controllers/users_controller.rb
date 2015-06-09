@@ -27,11 +27,6 @@ class UsersController < ApplicationController
       @matches_20miles = User.near([current_user.latitude, current_user.longitude], 20).where.not(id: current_user.id)
       @matches_duplicates = @matches_10miles + @matches_20miles
       @matches_20miles_uniq = @matches_duplicates.reject{ |match| @matches_duplicates.count(match) > 1 }
-
-
-
-
-
       @matches_ability = User.where(ability: current_user.ability).where.not(id: current_user.id)
     else
       redirect_to root_path, notice: 'You must be logged in to view this page.'
