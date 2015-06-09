@@ -230,3 +230,20 @@ a:hover {
 .well h1 {
   text-align: center;
 }
+
+.thumbnail {
+  height: 375px;
+  margin-bottom: 0;
+}
+
+.thumbnail img {
+  max-height: 250px;
+}
+
+.thumbnail .caption {
+  text-align: center;
+}
+
+.match {
+  margin-top: 15px;
+}
