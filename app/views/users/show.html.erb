@@ -32,7 +32,11 @@
        <tr>
          <td><b>Ability: </b><%= @user.ability %></td>
        </tr>
-
+       <% if current_user %>
+         <tr>
+           <td><b>Distance From You: </b><%= @distance.round(2) %> miles</td>
+         </tr>
+      <% end %>
     </tbody>
   </table>
 

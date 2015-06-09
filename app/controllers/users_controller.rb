@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @distance = Geocoder::Calculations.distance_between([@user.latitude, @user.longitude], [current_user.latitude, current_user.longitude])
   end
 
   def match
