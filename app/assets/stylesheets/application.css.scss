@@ -247,3 +247,17 @@ a:hover {
 .match {
   margin-top: 15px;
 }
+
+.about {
+  height: 300px;
+}
+
+// Homepage Styles
+.about h2, .about p {
+  text-align: center;
+}
+
+.about h2 {
+  border-top: solid 1px;
+  padding: 20px;
+}

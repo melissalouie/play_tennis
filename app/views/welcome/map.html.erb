@@ -2,7 +2,6 @@
 <head>
 </head>
 <script>
-
 var markers = [];
 
 function initialize() {
@@ -24,7 +23,7 @@ function initialize() {
           });
           marker.id = <%= user.id %>
           marker.setMap(map);
-          markers.push(marker)
+          markers.push(marker);
       <% end %>
 
 
@@ -106,15 +105,13 @@ function changeMarker(id) {
   marker.setIcon(icon);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
 // var users = document.getElementsByClassName("user");
 // for(var i = 0; i < users.length; i++ ) {
 //   users[i].addEventListener("mouseover", changeMarker(users[i].id), false);
 // }
 
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
 <body>
