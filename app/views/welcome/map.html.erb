@@ -8,7 +8,7 @@ function initialize() {
 
 
   var mapOptions = {
-    zoom: 10,
+    zoom: 13,
     center: new google.maps.LatLng(39.72, -104.99),
     disableDefaultUI: true
   }
@@ -72,12 +72,36 @@ function initialize() {
         position: place.geometry.location
       });
 
-      markers.push(marker);
+      <% @users.each do |user| %>
+          var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(<%= user.latitude %>, <%= user.longitude %>),
+            map: map
+          });
+          marker.id = <%= user.id %>
+          marker.setMap(map);
+          markers.push(marker);
+      <% end %>
 
+      markers.push(marker);
       bounds.extend(place.geometry.location);
     }
 
+
+
+    google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+  if (this.getZoom() > 15) {
+    this.setZoom(15);
+  }
+});
     map.fitBounds(bounds);
+
+
+
+
+
+
+
+
   });
   // [END region_getplaces]
 
@@ -92,17 +116,14 @@ function initialize() {
    map.setZoom(8);
    map.setCenter(marker.getPosition());
  });
-
-
-
 }
 
 
 function changeMarker(id) {
   var icon = new google.maps.MarkerImage({ url:"http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=1|ffffff|c41200"});
   var marker = $.grep(markers, function(e){ return e.id == id; });
-  debugger
-  marker.setIcon(icon);
+  // marker.setIcon(icon);
+  console.log('HI');
 }
 
 // var users = document.getElementsByClassName("user");
