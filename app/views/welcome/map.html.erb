@@ -86,22 +86,12 @@ function initialize() {
       bounds.extend(place.geometry.location);
     }
 
-
-
     google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-  if (this.getZoom() > 15) {
-    this.setZoom(15);
-  }
-});
+      if (this.getZoom() > 15) {
+        this.setZoom(15);
+      }
+    });
     map.fitBounds(bounds);
-
-
-
-
-
-
-
-
   });
   // [END region_getplaces]
 
@@ -116,15 +106,20 @@ function initialize() {
    map.setZoom(8);
    map.setCenter(marker.getPosition());
  });
+
 }
+
+
 
 
 function changeMarker(id) {
-  var icon = new google.maps.MarkerImage({ url:"http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=1|ffffff|c41200"});
+  // var icon = new google.maps.MarkerImage({ url:"http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=1|ffffff|c41200"});
   var marker = $.grep(markers, function(e){ return e.id == id; });
   // marker.setIcon(icon);
-  console.log('HI');
+  styleIcon.set("color","#0033CC");
+  // console.log('HI');
 }
+
 
 // var users = document.getElementsByClassName("user");
 // for(var i = 0; i < users.length; i++ ) {
@@ -140,7 +135,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <input id="pac-input" class="controls" type="text" placeholder="Find players in your area...">
     <br><br>
     <% @users.each do |user| %>
-      <div id="<%= user.id %>" class="user" onmouseover="changeMarker(<%= user.id %>)">
+      <div id="<%= user.id %>" class="user" >
         <%= link_to(user.full_name, user_path(user)) %><br>
         <%= user.address %><br>
         <%= user.email %><br><br>
