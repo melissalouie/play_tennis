@@ -7,7 +7,7 @@
   <% @matches_5miles.each do |match| %>
     <div class="col-md-3 match">
       <div class="thumbnail">
-        <%= image_tag(match.avatar_url, class: 'thumbnail') %>
+        <%= image_tag("/users/#{match.first_name}.jpg", class: 'thumbnail') %>
         <div class="caption">
           <h4><%=link_to match.full_name, user_path(match) %></h4>
           <% if match.ability == '2.0 - New to tennis' %>
