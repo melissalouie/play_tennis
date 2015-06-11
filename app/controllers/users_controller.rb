@@ -24,6 +24,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to matches_path
+    else
+      render :edit
+    end
+  end
+
   def matches
     if current_user
       @matches_5miles = User.near([current_user.latitude, current_user.longitude], 5).where.not(id: current_user.id)
