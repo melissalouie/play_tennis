@@ -37,18 +37,26 @@
 <div class="row clearfix features">
   <div class="col-md-3 feature" id="sign_up">
     <h2 id="sign_up_text">Sign Up</h2>
-    <%= image_tag('keyboard.jpg', size: '265x265', id: 'keyboard') %>
+    <%= link_to signup_path do %>
+      <%= image_tag('keyboard.jpg', size: '265x265', id: 'keyboard') %>
+    <% end %>
   </div>
   <div class="col-md-3 feature" id="explore_map">
     <h2 id="map_text">Explore Map</h2>
-    <%= image_tag('map.jpg', size: '265x265', id: 'denver_map') %>
+    <%= link_to map_path do %>
+      <%= image_tag('map.jpg', size: '265x265', id: 'denver_map') %>
+    <% end %>
   </div>
   <div class="col-md-3 feature" id="matches">
     <h2 id="matches_text">Meet Matches</h2>
-    <%= image_tag('handshake.jpg', size: '265x265', id: 'handshake') %>
+    <%= link_to matches_path do %>
+      <%= image_tag('handshake.jpg', size: '265x265', id: 'handshake') %>
+    <% end %>
   </div>
   <div class="col-md-3 feature" id="message_board">
     <h2 id="message_board_text">What's Up?</h2>
-    <%= image_tag('message_board.jpg', size: '265x265', id: 'message_board_image') %>
+    <%= link_to messages_path do %>
+      <%= image_tag('message_board.jpg', size: '265x265', id: 'message_board_image') %>
+    <% end %>
   </div>
 </div>
