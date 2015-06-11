@@ -29,7 +29,7 @@ $(function() {
         if(data.id % 4 === 0) {
           $(".messages").append($("<div class='col-md-3 blank_message'></div><div class='col-md-3 message'><p>" + data.text + '</p><p>' + data.email + '</p></div>').hide().fadeIn(2000));
         }
-        else { $(".messages").append($("<div class='col-md-3 message'><p>" + data.text + '</p><p>' + data.email + '</p></div>').hide().fadeIn(2000)); }
+        else { $(".messages").append($("<div class='col-md-3 message'><p>" + data.text + '</p><p>Send Message: ' + data.email + '</p></div>').hide().fadeIn(2000)); }
       }
     });
   });
