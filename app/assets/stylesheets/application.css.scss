@@ -8,7 +8,7 @@
   color: #9d9d9d;
 }
 
-.fa {
+#menu {
   font-size: 20px !important;
   margin-left: -15px;
 }
@@ -42,13 +42,19 @@ footer .row{
 }
 
 .navbar-inverse {
-  background-color: white;
-  border-color: white;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 
 .carousel-inner > .item > img {
   width: 1300px;
+}
+
+hr {
+  margin-top: 40px;
+  border-top: 1px solid #9d9d9d;
+  width: 450px;
 }
 
 .layer {
@@ -65,13 +71,6 @@ a:hover {
   color: black !important;
 }
 
-.section-heading-spacer {
-  float: left;
-  width: 200px;
-  border-top: 3px solid #e7e7e7;
-  margin-top: -30px;
-  margin-left: 170px;
-}
 
 .section-title {
   margin-top: 23px;
@@ -269,7 +268,6 @@ a:hover {
 }
 
 .about h2 {
-  border-top: solid 1px;
   padding: 20px;
 }
 
@@ -279,10 +277,19 @@ a:hover {
   margin: 10px
 }
 
-.feature p {
+.feature {
   text-align: center;
 }
 
 #keyboard {
-  display:none;
+  display: none;
+  position: relative;
+  opacity: 0.6;
+  filter: alpha(opacity=40);
+}
+
+#sign_up_text {
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 35%;
 }
