@@ -19,14 +19,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @distance = Geocoder::Calculations.distance_between([@user.latitude, @user.longitude], [current_user.latitude, current_user.longitude])
+    if current_user
+      @distance = Geocoder::Calculations.distance_between([@user.latitude, @user.longitude], [current_user.latitude, current_user.longitude])
+    end
   end
 
   def match
     if current_user
       @matches_5miles = User.near([current_user.latitude, current_user.longitude], 5).where.not(id: current_user.id)
       @matches_10miles = User.near([current_user.latitude, current_user.longitude], 10).where.not(id: current_user.id)
-      @matches_duplicates = @matches_10miles + @matches_20miles
+      @matches_duplicates = @matches_10miles + @matches_5miles
       @matches_10miles_uniq = @matches_duplicates.reject{ |match| @matches_duplicates.count(match) > 1 }
       @matches_ability = User.where(ability: current_user.ability).where.not(id: current_user.id)
     else
