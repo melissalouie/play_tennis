@@ -220,7 +220,6 @@ a:hover {
 }
 
 .message {
-
   height: 193px;
   background-color: #FFFFA4;
   box-shadow: 5px 5px 5px #888888;
@@ -281,14 +280,14 @@ a:hover {
   text-align: center;
 }
 
-#keyboard, #handshake {
+#keyboard, #handshake, #denver_map, #message_board_image {
   display: none;
   position: relative;
   opacity: 0.6;
   filter: alpha(opacity=40);
 }
 
-#sign_up_text, #matches_text {
+#sign_up_text, #matches_text, #map_text, #message_board_text {
   position: absolute;
   margin-top: 35%;
   left:0;

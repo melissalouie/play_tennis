@@ -44,6 +44,7 @@ $(function() {
       $('#sign_up_text').fadeIn(700);
     }
   );
+
   $('#matches').hover(
     function() {
       $('#matches_text').fadeOut(700);
@@ -54,8 +55,25 @@ $(function() {
     }
   );
 
+  $('#explore_map').hover(
+    function() {
+      $('#map_text').fadeOut(700);
+      $('#denver_map').fadeIn(700);
+    }, function() {
+      $('#denver_map').fadeOut(700);
+      $('#map_text').fadeIn(700);
+    }
+  );
 
-
+  $('#message_board').hover(
+    function() {
+      $('#message_board_text').fadeOut(700);
+      $('#message_board_image').fadeIn(700);
+    }, function() {
+      $('#message_board_image').fadeOut(700);
+      $('#message_board_text').fadeIn(700);
+    }
+  );
 
 
 });

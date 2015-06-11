@@ -39,14 +39,16 @@
     <h2 id="sign_up_text">Sign Up</h2>
     <%= image_tag('keyboard.jpg', size: '265x265', id: 'keyboard') %>
   </div>
-  <div class="col-md-3 feature">
-    <p class="lead"><%= link_to 'Explore Our Map', map_path %></p>
+  <div class="col-md-3 feature" id="explore_map">
+    <h2 id="map_text">Explore Map</h2>
+    <%= image_tag('map.jpg', size: '265x265', id: 'denver_map') %>
   </div>
   <div class="col-md-3 feature" id="matches">
     <h2 id="matches_text">Meet Matches</h2>
     <%= image_tag('handshake.jpg', size: '265x265', id: 'handshake') %>
   </div>
-  <div class="col-md-3 feature">
-    <p class="lead"><%= link_to "Look Who's Talking", messages_path %></p>
+  <div class="col-md-3 feature" id="message_board">
+    <h2 id="message_board_text">What's Up?</h2>
+    <%= image_tag('message_board.jpg', size: '265x265', id: 'message_board_image') %>
   </div>
 </div>
