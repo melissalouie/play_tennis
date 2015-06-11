@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def match
+  def matches
     if current_user
       @matches_5miles = User.near([current_user.latitude, current_user.longitude], 5).where.not(id: current_user.id)
       @matches_10miles = User.near([current_user.latitude, current_user.longitude], 10).where.not(id: current_user.id)

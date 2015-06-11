@@ -2,6 +2,17 @@
 @import 'bootstrap-sprockets';
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus, .dropdown-menu > li > a {
+  background-color: #fff !important;
+  color: #9d9d9d;
+}
+
+.fa {
+  font-size: 20px !important;
+  margin-left: -15px;
+}
+
 body {
   padding-top: 50px;
   font-family: 'Open Sans', sans-serif;
