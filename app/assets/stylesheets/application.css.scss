@@ -281,15 +281,18 @@ a:hover {
   text-align: center;
 }
 
-#keyboard {
+#keyboard, #handshake {
   display: none;
   position: relative;
   opacity: 0.6;
   filter: alpha(opacity=40);
 }
 
-#sign_up_text {
+#sign_up_text, #matches_text {
   position: absolute;
-  margin-left: 25%;
   margin-top: 35%;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
 }

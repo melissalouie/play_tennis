@@ -36,14 +36,15 @@
 </div>
 <div class="row clearfix features">
   <div class="col-md-3 feature" id="sign_up">
-    <center><h2 id="sign_up_text">Sign Up</h2></center>
+    <h2 id="sign_up_text">Sign Up</h2>
     <%= image_tag('keyboard.jpg', size: '265x265', id: 'keyboard') %>
   </div>
   <div class="col-md-3 feature">
-    <p class="lead"><%= link_to 'See Your Matches', matches_path %></p>
-  </div>
-  <div class="col-md-3 feature">
     <p class="lead"><%= link_to 'Explore Our Map', map_path %></p>
+  </div>
+  <div class="col-md-3 feature" id="matches">
+    <h2 id="matches_text">Meet Matches</h2>
+    <%= image_tag('handshake.jpg', size: '265x265', id: 'handshake') %>
   </div>
   <div class="col-md-3 feature">
     <p class="lead"><%= link_to "Look Who's Talking", messages_path %></p>

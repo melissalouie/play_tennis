@@ -37,11 +37,25 @@ $(function() {
   // Homepage Animations
   $('#sign_up').hover(
     function() {
-      $('#sign_up_text').fadeOut(500);
-      $('#keyboard').fadeIn(500);
+      $('#sign_up_text').fadeOut(700);
+      $('#keyboard').fadeIn(700);
     }, function() {
-      $('#keyboard').fadeOut(500);
-      $('#sign_up_text').fadeIn(500);
+      $('#keyboard').fadeOut(700);
+      $('#sign_up_text').fadeIn(700);
     }
   );
+  $('#matches').hover(
+    function() {
+      $('#matches_text').fadeOut(700);
+      $('#handshake').fadeIn(700);
+    }, function() {
+      $('#handshake').fadeOut(700);
+      $('#matches_text').fadeIn(700);
+    }
+  );
+
+
+
+
+
 });
