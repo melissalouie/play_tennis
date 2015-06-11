@@ -37,6 +37,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to root_path, notice: 'User successfully deleted.'
+  end
+
   def matches
     if current_user
       @matches_5miles = User.near([current_user.latitude, current_user.longitude], 5).where.not(id: current_user.id)
